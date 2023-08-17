@@ -109,14 +109,16 @@ class FlywayDemoApplicationTests {
         val books = bookRepository.findAllFor(authorId, NamedEntityGraph.loading(BOOK_AUTHOR));
 
         assertEquals(expectedBooksCount, books.size());
-        books.forEach(b -> assertEquals("Uncle Bob", b.getAuthor().getName()));
+        books.forEach(b -> assertEquals("Uncle Bob", b.getAuthor().getArtistName()));
 
     }
 
 
     private long storeSomeData() {
         var authorWithBooks = Author.builder()
-                .name("Uncle Bob")
+                .artistName("Uncle Bob")
+                .preName("Robert C.")
+                .familyName("Martin")
                 .build();
 
         authorWithBooks = authorRepository.save(authorWithBooks);

@@ -37,7 +37,13 @@ import static ch.subsidia.flywaydemo.repository.model.EntityGraphs.AUTHOR_BOOKS;
 public class Author extends BaseEntity {
 
     @Column(nullable = false)
-    private String name;
+    private String artistName;
+
+    @Column(nullable = false)
+    private String preName;
+
+    @Column(nullable = false)
+    private String familyName;
 
     @Builder.Default
     @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
