@@ -23,6 +23,9 @@ spring:
   flyway:
     locations:
       - classpath:db/migration
+    baseline-on-migrate: true
+    baseline-version: 2.0.0
+    validateMigrationNaming: true
 
 logging:
   level:

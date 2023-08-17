@@ -13,7 +13,7 @@ Simple demo to reproduce a baseline migration for Spring-Boot:3.x and Flyway:9.x
 There are 3 states in 3 commits
 - Initial State: flyway v1.0.0
 - Migration State: flyway v1.0.1
-- Baseline State: flyway 2.0.0
+- Baseline State: flyway v2.0.0
 
 Switch back and forth between the individual commits with:
 ```bash
