@@ -23,7 +23,6 @@ spring:
   flyway:
     locations:
       - classpath:db/migration
-    baseline-on-migrate: true
     baseline-version: 2.0.0
     ignore-migration-patterns: "*:missing"
     validateMigrationNaming: true
